@@ -64,11 +64,12 @@ class AuthController extends Controller
         ]);
 
         try {
-            User::create([
+            $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password)
             ]);
+            Auth::login($user);
 
             return redirect()->route('dashboard')->with('success', 'You have Successfully loggedin');
         } catch (Exception $e) {

@@ -174,7 +174,7 @@ class UrlController extends Controller
      */
     public function update(Request $request, Url $url)
     {
-        // Check ownership
+
         if ($url->user_id !== Auth::id()) {
             return response()->json([
                 'success' => false,
@@ -235,7 +235,7 @@ class UrlController extends Controller
      */
     public function delete(Url $url)
     {
-        // Check ownership
+
         if ($url->user_id !== Auth::id()) {
             return response()->json([
                 'success' => false,
@@ -272,7 +272,6 @@ class UrlController extends Controller
      */
     public function view(Url $url)
     {
-        // Check ownership
         if ($url->user_id !== Auth::id()) {
             return response()->json([
                 'success' => false,

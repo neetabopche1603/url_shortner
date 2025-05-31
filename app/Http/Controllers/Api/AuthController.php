@@ -82,7 +82,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->firstOrFail();
 
         // Delete existing tokens if needed
-        // $user->tokens()->delete();
+        $user->tokens()->delete();
 
         $token = $user->createToken('api-token')->plainTextToken;
 

@@ -72,6 +72,6 @@ class ProfileController extends Controller
         $user->save();
 
         return redirect()->route('profile.show')
-            ->with('status', 'Your password has been changed successfully.');
+            ->with('success', 'Your password has been changed successfully.');
     }
 }
