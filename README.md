@@ -23,7 +23,7 @@ A robust URL shortening service built with Laravel 10, offering user authenticat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/url-shortener.git
+   git clone https://github.com/neetabopche1603/url_shortner.git
    cd url-shortener
    ```
 
